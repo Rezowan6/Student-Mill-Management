@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    background-color: darkblue;
+    transition: all .5s;
+}
+.mainContainer{
+    width: 95%;
+    margin: 0 auto;
+}
+h2 {
+    margin: 3rem 0;
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    text-decoration-style: dotted;
+    text-decoration-color: yellow;
+}
+h3{
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
+}
+.blur-active{
+    filter: blur(8px);
+}
+.btn {
+    background-color: crimson;
+    padding: 10px 15px;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    &:hover{
+        background-color: turquoise;
+        transition: all .5s;
+    }
+}
+
+/*----- navbar style starts ------*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: darkturquoise;
+    padding: 1.5rem 1rem;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 1.8rem;
+    }
+    ul li{
+    list-style: none;
+    &:hover{
+        transform: scale(1.1);
+        transition: all .5s;
+    }
+    a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    &:hover{
+        text-decoration: underline;
+        color: yellow;
+        text-decoration-color: white;
+    }
+}
+}
+}
+#menu__icon{
+    display: none;
+}
+#searchInput{
+    padding: 10.3px .8rem;
+    border-radius: .3rem;
+    border: none;
+    color: black;
+    &:focus{
+        outline: none;
+        color: white;
+        background-color: indigo;
+        &::placeholder{
+            color: white;
+        }
+    }
+}
+/*----- navbar style ends------*/
+
+
+/* =============================
+📱 Responsive (Mobile) Design
+============================= */
+@media (max-width: 768px) {
+    .mainContainer{
+        width: 95%;
+    }
+    nav{
+        position: relative;
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        gap: 1rem;
+        padding: .5rem 0;
+        background-color: transparent;
+        #menu{
+            position: absolute;
+            flex-direction: column;
+            width: 100%;
+            left: 0;
+            top: 3rem;
+            padding: 7rem;
+            background: rgba(255, 255, 255, 0.15); /* transparent white layer */
+            backdrop-filter: blur(10px); /* main blur */
+            -webkit-backdrop-filter: blur(5px); /* Safari support */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+        }
+        ul li{
+            text-align: center;
+            padding: 1rem;
+            &:hover{
+                transform: scale(1.05);
+                transition: transform .6s all;
+                cursor: pointer;
+            }
+        }
+        .contronResponsive{
+            display: none;
+        }
+    }
+    #menu__icon{
+        position: absolute;
+        display: block;
+        left: 0;
+        color: white;
+        cursor: pointer;
+    }
+    #searchBtn{
+        position: absolute;
+        right: 0;
+    }
+    #searchInput:focus{
+        background-color: darkcyan;
+    }
+}

@@ -1,0 +1,106 @@
+/* =============================
+    ✅ Default (Desktop) Style
+============================= */
+h3 {
+    margin-bottom: .5rem;
+}
+.studentDataManagement{
+    display: flex;
+    justify-content: space-between;
+}
+form, .search-box {
+    margin-bottom: 20px;
+}
+input, #studentSelect {
+    padding: 8px;
+    margin-right: 10px;
+}
+#studentSelect, input:focus {
+    outline: none;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+button.add { background-color: green; }
+button.edit { background-color: orange; }
+button.delete { background-color: crimson; }
+button.month, .closeMonthData { background-color: indigo; }
+button:hover {
+    background-color: rgb(6, 172, 175);
+    transition: all .5s;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #eee;
+}
+#total, #totalMill {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* =============================
+📱 Responsive (Mobile) Design
+============================= */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .studentDataManagement{
+        flex-direction: column;
+    }
+
+    form, .search-box {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: .7rem;
+    }
+
+    input, #studentSelect, button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+
+    button {
+        padding: 10px;
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 8px 5px;
+    }
+
+    #total, #totalMill {
+        font-size: 16px;
+        text-align: center;
+    }
+    #tkInput{
+        margin: .5rem 0;
+    }
+}

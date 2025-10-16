@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <!-- link font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/expences.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <!-- create a navegation bar -->
+        <nav id="home">
+            <ul id="menu" class="contronResponsive">
+                <li class="item"><a href="index.html" class="link">Home</a></li>
+                <li class="item"><a href="updates.html" class="link">Updates</a></li>
+                <li class="item"><a href="expensed.html" class="link">Expences</a></li>
+                <li class="item"><a href="dasboard.html" class="link">Dashbord</a></li>
+            </ul>
+            <i class="fa-solid fa-bars-staggered fa-2x" id="menu__icon"></i>
+            <div id="searchBtn">
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+        </nav>
+
+        <!-- 🧾 App title-->
+        <h2>📋 Every Day Expences</h2>
+
+
+<div class="mainContain">
+    <div class="mainForm">
+        <div class="div1">
+            <h3>📅 Add Expences Data</h3>
+            <p id="total__money">Total Expences: ৳0</p>
+        </div>
+
+        <!-- Form to add expences -->
+        <form id="studentForm">
+            <div class="customInputBtn">
+                <!-- 🔹 Custom total money input -->
+                <div id="coustonInput">
+                    <label id="customInputTk" for="expencesTk">Custom Input:</label>
+                    <input type="number" id="expencesTk" placeholder="Enter Total Tk" required>
+                </div>
+
+                <!-- 🔹 Add button -->
+                <button type="submit" class="add">Add Expence</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Table for showing expences -->
+    <div class="tableContainer">
+        <h2>📊 Table for Expences Data</h2>
+        <table id="expencesTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Expences Tk</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be added here using JS -->
+            </tbody>
+        </table>
+    </div>
+
+    
+        <div id="deleteAllBtn">
+            <button type="button" class="btn" id="deleteBtn">Delete Expence</button>
+            <button type="button" class="btn" id="restartBtn">Restart</button>
+        </div>
+</div>
+
+
+    </div>
+
+    <script src="./script/navbar.js"></script>
+    <script src="./script/expences.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mill Management System</title>
+    <!-- link font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- link css style -->
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <!-- create a navegation bar -->
+        <nav id="home">
+            <ul id="menu" class="contronResponsive">
+                <li class="item"><a href="index.html" class="link">Home</a></li>
+                <li class="item"><a href="updates.html" class="link">Updates</a></li>
+                <li class="item"><a href="expensed.html" class="link">Expences</a></li>
+                <li class="item"><a href="dasboard.html" class="link">Dashbord</a></li>
+            </ul>
+            <i class="fa-solid fa-bars-staggered fa-2x" id="menu__icon"></i>
+            <div id="searchBtn">
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+        </nav>
+
+    <div class="mainContent">
+    <!-- 🧾 App title-->
+        <h2>📋 Students Mill Management</h2>
+
+        <!-- ===============================
+            🧍‍♂️ Student Add Form Section
+        ================================== -->
+        <div class="mainForm">
+        <h3>📅 Add First Data</h3>
+            <form id="studentForm">
+                <div>
+                <!-- 🔹 Input student name -->
+                <input type="text" id="name" placeholder="Enter Name" required>
+
+                <!-- 🔹 Checkbox Section -->
+                <div id="checkbox__wrapper">
+                    <label class="checkbox-container">
+                    <input type="checkbox" name="amount" value="500">
+                    <span class="checkmark"></span> ৳500
+                    </label>
+                    <label class="checkbox-container">
+                    <input type="checkbox" name="amount" value="1000">
+                    <span class="checkmark"></span> ৳1000
+                    </label>
+                    <label class="checkbox-container">
+                    <input type="checkbox" name="amount" value="1500">
+                    <span class="checkmark"></span> ৳1500
+                    </label>
+                    <label class="checkbox-container">
+                    <input type="checkbox" name="amount" value="2000">
+                    <span class="checkmark"></span> ৳2000
+                    </label>
+                    <label class="checkbox-container">
+                    <input type="checkbox" name="amount" value="2500">
+                    <span class="checkmark"></span> ৳2500
+                    </label>
+                </div>
+                </div>
+
+                <div class="customInputBtn">
+                <!-- 🔹 Custom total money input -->
+                <div id="coustonInput">
+                    <label id="customInputTk" for="studentTk">Custom Input:</label>
+                    <input type="number" id="studentTk" placeholder="Enter Total Tk" required>
+                </div>
+
+                <!-- 🔹 Add button -->
+                <button type="submit" class="add">Add Student</button>
+                </div>
+            </form>
+        </div>
+
+
+
+            <!-- ===============================
+            📊 Student Data Table Section
+            ================================== -->
+            <table id="studentTable">
+                <thead>
+                    <h2>Table For Show Data</h2>
+                    <tr>
+                        <th>ID</th>            <!-- Student serial number -->
+                        <th>Name</th>          <!-- Student name -->
+                        <th>Student Tk</th>    <!-- Total Tk -->
+                        <th>Date</th>    <!-- Date of addition -->
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <!-- 🔸 Data will be added below using JavaScript. -->
+            </table>
+
+            <div id="deleteAllBtn">
+                <button type="button" class="btn" id="deleteBtn">Delete Student</button>
+                <button type="button" class="btn" id="restartBtn">Restart</button>
+            </div>
+            
+            <p id="total__money">Total Money: ৳0</p> 
+        </div>
+    </div>
+    <script src="./script/navbar.js"></script>
+    <script src="./script/index.js"></script>
+</body>
+</html>
